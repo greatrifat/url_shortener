@@ -36,3 +36,27 @@ export async function POST(req) {
 }
 
 
+export async function GET(req) {
+
+  try{
+    await connectDB();
+    const all_url = await URL.find();
+    return NextResponse.json({ all_url }, { status: 200 });
+  }catch{
+
+  }
+
+}
+
+export async function DELETE(req) {
+
+  try{
+    await connectDB();
+    const id = req.nextUrl.searchParams.get('id');
+    await URL.findByIdAndDelete(id);
+    return NextResponse.json({ message: "Successfully deleted" }, { status: 200 });
+  }catch{
+
+  }
+
+}
