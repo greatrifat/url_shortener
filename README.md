@@ -26,7 +26,8 @@ npm run dev
 # or
 yarn dev
 ```
-
+roadmap:
+https://roadmap.sh/projects/url-shortening-service
 
 ## Demo
 Check out the live demo here: ([greaturl.vercel.app](https://greaturl.vercel.app/))
